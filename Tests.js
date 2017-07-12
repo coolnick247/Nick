@@ -1,4 +1,7 @@
-For ( var i = 0; i<5; i++){
-var myPeeps = ["nick", "me", "Myself", "Nick2","Nicholas"];
+function coolNick(number){
+var randomNumber = Math.random() * number;
+var result = Math.floor(randomNumber);
+return result;
+}
+console.log(coolNick(10));
 
-Console.log(myPeeps[i]);}
