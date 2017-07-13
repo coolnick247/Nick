@@ -6,8 +6,6 @@ function randomLetter(why){
 }
 console.log(randomLetter(lettersLength));
 
-
-
 function randWord()
 {
     var word = "";
@@ -19,11 +17,10 @@ function randWord()
 }
 console.log(randWord());
 
+
 function randSentence()
 {
-   var sentense = console.log(randomWord() + " " + randomWord() + " " + randomWord());
+ var sentence = console.log(randomWord() + " " + randomWord() + " " + randomWord());
+ return sentence;
 }
-
-console.log(randWord(sentense));
-
-
+console.log(randWord(sentence));
