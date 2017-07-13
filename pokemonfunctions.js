@@ -6,10 +6,11 @@ function randomLetter(why){
 }
 console.log(randomLetter(lettersLength));
 
+var randomLength =Math.floor(Math.random(lettersLength));
 function randWord()
 {
     var word = "";
-    for (var i = 0; i <  6; i++)
+    for (var i = 0; i < randomLength; i++)
     {
         word = word + randomLetter(lettersLength);
     }
@@ -20,7 +21,7 @@ console.log(randWord());
 
 function randSentence()
 {
- var sentence = console.log(randomWord() + " " + randomWord() + " " + randomWord());
+ var sentence = randWord() + " " + randWord() + " " + randWord();
  return sentence;
 }
-console.log(randWord(sentence));
+console.log(randWord(randSentence()));
