@@ -1,36 +1,31 @@
+var sentences = ["yahoo #1", "hide it in my sock", "where is my money", "hi"];
+var inp;
+var i = 0;
+var points = 0
 function setup(){
-    createCanvas(windowWidth, windowHeight);
-    background('black');
+  createCanvas(windowWidth,windowHeight);
+  
+  inp = createInput("");
+  inp.position(100,200);
 }
 
-
-//Array for the sentences
-var strings = ["Spicy", "Yahoo Gang is the GOAT", "Winter is Coming", "You know nothing, Jon Snow", "I have failed"];
-
-//Will be used for score
-var x = 0;
-
-//Main function that runs the program
 function keyTyped(){
-    if (key === '`'){
-        var rand = Math.floor(Math.random()*strings.length);
-        var sample = strings[rand];
-        background('black');
-        fill('white');
-        text('Please type the sentence below: ', width/10, height/5, width/2, height/4);
-        text('Current Points: ' + x, width/10, height/1.5);
-        text (sample, width/10, height/3);
-        var inp = createInput();
-        inp.position(width/10, height/1.7);
-        if (keyCode === ENTER){
-            if (inp.trim() === sample.trim()) {
-                x+=10;
-                alert("You win!");
-            }else if(inp.trim() !== sample.trim()) {
-                x-=10;                
-                fill('white');
-                alert('You need to work on your typing!');
-            }
-        }
+  if (keyCode == ENTER){
+    if (inp.value() == sentences[i]){
+      alert("Correct");
+      if (i == 3){
+        i = 0;
+      }
+      else {
+      i++
+      points++
+      noStroke();
+      rect(500,300,100,50);
+        text("Your score:"+ points, 500,320);
+      }
     }
-}
+    else{
+      alert("try again");
+    }
+
+}}
