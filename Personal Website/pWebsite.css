@@ -1,0 +1,22 @@
+.fstPgTxt {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    
+}
+
+.fstPgTxt h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 100px;
+    font-weight: 700;
+}
+
+ .fstPgTxt h3 {
+     font-size: 30px;
+ }
+
+.fstPgTxt a{
+    font-size: 20px;
+}
+

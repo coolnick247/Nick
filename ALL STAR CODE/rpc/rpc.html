@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+     var config = {
+      apiKey: "AIzaSyCVMqMAH3tSaZEtOHH5K0WJCvbn5BnGoRA",
+      authDomain: "rpc-game.firebaseapp.com",
+     databaseURL: "https://rpc-game.firebaseio.com",
+      projectId: "rpc-game",
+     storageBucket: "",
+      messagingSenderId: "746776505247"
+     };
+      firebase.initializeApp(config);
+    </script>
+
+    <link href="rpc.css" rel="stylesheet">
+    <script src ="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src ="rpc.js"></script>
+</head>
+
+<body>
+    <!--Starting words-->
+    <h1>Rock Paper Scissors</h1>
+    <div class="b4" style="text-align:center">
+        <h2> You [w/l]!!!
+        <h3>Your score: <span id="span1"></span></h3>
+        <h3>Computer Score: <span id="span2"></span></h3>
+        <h4>Try again?</h4>
+    </div> <!--when clicked start over-->
+
+    <div class="rpc">
+        <input type="button" onclick="rock()" value="Rock" >
+        <input type="button" onclick="paper()" value="Paper" >
+        <input type="button" onclick="scissors()" value="Scissors">
+    </div>
+    
+    <div class="rules">
+        <h1>RULES</h1>
+        <p>They are very simple and goes as follows:</p>
+        <ol>
+            <li>If you win, you gain 1 point and the computer loses 1 point</li>
+            <li>If you lose, you lose 1 point and the computer gains 3 points</li>
+            <li>If it's a tie, you both lose 1 point</li>
+        </ol>
+        <p>See? Simple. Now let's see if you can get more points than the computer :)</p>
+        <p> <b>If you get 5 points above the computer then I'll deadass give you $5<b></p> 
+
+    </div>
+
+     <input type="button" onclick="iQuit()" value="I Quit">
+</body>
+
+</html>
