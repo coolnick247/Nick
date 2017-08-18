@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>SLS</title>
+    <script src ="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <link href="website.css" rel="stylesheet">
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+ <script>
+    // Initialize Firebase
+     var config = {
+      apiKey: "AIzaSyB0gVSupH9o14PWVn0ENUCm_rK2VeXos18",
+     authDomain: "subcriptions-sign-in.firebaseapp.com",
+     databaseURL: "https://subcriptions-sign-in.firebaseio.com",
+     projectId: "subcriptions-sign-in",
+     storageBucket: "",
+      messagingSenderId: "1088552485422"
+     };
+     firebase.initializeApp(config);
+    </script>
+    <link rel="icon" href="http://www.pngall.com/wp-content/uploads/2016/04/Diamond-PNG-Image.png">
+
+    <script src ="website.js"></script>
+   
+</head>
+
+<body>
+    <div class="leftsd">
+        <h2>SFL</h2>
+        <p> Manage all your subscriptions in one app</p>
+        <img src="./logo.png">
+
+    </div>
+    <div class="rightsd">
+        <h2> Sign Up</h2>
+        <div class="user">
+          <input id='username' type="text" placeholder="Username">
+          <input id='password' type="text" placeholder="Password">
+          <input id='email' type="text" placeholder="Email">
+          <input class="button" type="button" onclick="signUp()" value="Sign Up">
+          </div>
+        
+          <p>Already have an account? Sign in <a href="signIn.html">here</a></p>
+        
+
+
+    </div>
+
+
+
+
+    
+</body>
+
+</html>

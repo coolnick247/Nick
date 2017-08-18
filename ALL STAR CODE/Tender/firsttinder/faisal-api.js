@@ -83,3 +83,7 @@ $.ajax({
     $('#matchState3').attr("src",''+ userState3 +'');
   }
 }) 
+
+
+
+$curl -X GET "https://api.spotify.com/v1/me" -H "Authorization: Bearer {your access token}"

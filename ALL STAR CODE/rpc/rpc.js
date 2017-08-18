@@ -1,10 +1,10 @@
-var choices = ["rock", "paper", "scissors"];
-var pwins= 0;
-var cwins= 0;
+const choices = ["rock", "paper", "scissors"];
+let pwins= 0;
+let cwins= 0;
 function rock(){
-    var random = choices[Math.floor(Math.random() * 3)];
+    const random = choices[Math.floor(Math.random() * 3)];
     console.log(random);
-    var r = "rock"; 
+    const r = "rock"; 
     if (r == random)
         {
             alert("TIE!! -_-");
@@ -34,9 +34,9 @@ function rock(){
 
 
 function paper(){
-    var random1 = choices[Math.floor(Math.random() * 3)];
+    const random1 = choices[Math.floor(Math.random() * 3)];
     console.log(random1);
-    var r = "paper"; 
+    const r = "paper"; 
     if (r == random1)
         {
             alert("TIE!! -_-");
@@ -65,9 +65,9 @@ function paper(){
 }
 
 function scissors(){
-    var random2 = choices[Math.floor(Math.random() * 3)];
+    const random2 = choices[Math.floor(Math.random() * 3)];
     console.log(random2);
-    var r = "scissors"; 
+    const r = "scissors"; 
     if (r == random2)
         {
             alert("TIE!! -_-");
@@ -95,18 +95,18 @@ function scissors(){
 
 }
 
-var name = prompt("what's your name?");
-pwins=pwins;
+let name = prompt("what's your name?");
 
-function iQuit(){
 
+
+iQuit = () => {
     firebase.database().ref(name).set(
         {
             Score:pwins
         }
     )
     
-
 }
+
 
 
